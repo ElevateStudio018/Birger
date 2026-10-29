@@ -5,19 +5,18 @@
   var KONTAKT_EPOST = "";
   var KONTAKT_SMS = "+46702682250";
 
-  // Helskärmsmeny
+  // Mobilmeny
   var toggle = document.querySelector(".menu-toggle");
-  var menu = document.getElementById("menu");
+  var nav = document.getElementById("nav");
   var setMenu = function (open) {
     toggle.setAttribute("aria-expanded", String(open));
-    menu.classList.toggle("is-open", open);
-    document.body.classList.toggle("menu-open", open);
+    nav.classList.toggle("is-open", open);
   };
-  if (toggle && menu) {
+  if (toggle && nav) {
     toggle.addEventListener("click", function () {
       setMenu(toggle.getAttribute("aria-expanded") !== "true");
     });
-    menu.addEventListener("click", function (e) {
+    nav.addEventListener("click", function (e) {
       if (e.target.closest("a")) setMenu(false);
     });
     document.addEventListener("keydown", function (e) {
@@ -25,11 +24,10 @@
     });
   }
 
-  // Headern ligger transparent över toppbilden och blir ljus när man scrollat förbi den
+  // Headern är transparent över toppbilden och blir mörkblå när man scrollar
   var header = document.querySelector(".site-header");
-  var hero = document.querySelector(".hero");
   var onScroll = function () {
-    header.classList.toggle("is-solid", window.scrollY > hero.offsetHeight - header.offsetHeight);
+    header.classList.toggle("is-solid", window.scrollY > 40);
   };
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
@@ -43,14 +41,16 @@
     el.textContent = now - Number(el.getAttribute("data-years-since"));
   });
 
-  // Omdömen – sektionen visas bara när det finns omdömen i omdomen.js
+  // Omdömen – visas i stället för uppmaningen när det finns omdömen i omdomen.js
   var list = document.querySelector("[data-reviews]");
+  var empty = document.querySelector("[data-reviews-empty]");
   var reviews = Array.isArray(window.OMDOMEN) ? window.OMDOMEN : [];
   if (list && reviews.length > 0) {
     reviews.forEach(function (r) {
       list.appendChild(renderReview(r));
     });
-    document.getElementById("omdomen").hidden = false;
+    list.hidden = false;
+    if (empty) empty.hidden = true;
   }
 
   function renderReview(r) {
@@ -58,9 +58,9 @@
     card.className = "review";
 
     if (r.betyg) {
-      var stars = document.createElement("div");
       var n = Math.max(0, Math.min(5, Math.round(r.betyg)));
-      stars.className = "review-stars";
+      var stars = document.createElement("p");
+      stars.className = "stars";
       stars.setAttribute("aria-label", n + " av 5 i betyg");
       stars.textContent = "★★★★★".slice(0, n) + "☆☆☆☆☆".slice(0, 5 - n);
       card.appendChild(stars);
@@ -70,18 +70,12 @@
     quote.textContent = r.text;
     card.appendChild(quote);
 
-    var meta = [r.projekt, r.ort, r.datum].filter(Boolean).join(" · ");
     var cap = document.createElement("figcaption");
     var name = document.createElement("strong");
     name.textContent = r.namn || "Kund";
     cap.appendChild(name);
-    if (meta) cap.appendChild(document.createTextNode(" – " + meta));
-    if (r.kalla) {
-      var src = document.createElement("span");
-      src.className = "review-source";
-      src.textContent = "via " + r.kalla;
-      cap.appendChild(src);
-    }
+    var meta = [r.projekt, r.ort, r.datum, r.kalla && "via " + r.kalla].filter(Boolean).join(" · ");
+    if (meta) cap.appendChild(document.createTextNode(meta));
     card.appendChild(cap);
     return card;
   }
