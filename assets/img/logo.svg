@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 110" role="img" aria-label="BA Bygg Emmaboda">
-  <path d="M8 18c0-6 4-10 10-10h64c6 0 10 4 10 10v54c0 18-18 30-42 34C26 102 8 90 8 72Z" fill="none" stroke="#c9a24a" stroke-width="4"/>
-  <path d="M30 34 50 21l20 13" fill="none" stroke="#c9a24a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="50" y="66" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="30" fill="#c9a24a">BA</text>
-  <text x="50" y="80" text-anchor="middle" font-family="'DM Sans', Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="1" fill="#c9a24a">1988</text>
-  <text x="50" y="91" text-anchor="middle" font-family="'DM Sans', Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="1" fill="#c9a24a">BA BYGG</text>
-</svg>

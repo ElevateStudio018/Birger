@@ -1,47 +1,76 @@
-# BA Bygg Emmaboda – hemsida
+# BA Bygg Emmaboda – webbplats
 
-Hemsida för **Byggnadsfirman Birger Andersson Emmaboda AB** (BA Bygg Emmaboda), org.nr 556337-1490.
+Webbplats för **Byggnadsfirman Birger Andersson Emmaboda AB** (BA Bygg Emmaboda), org.nr 556337-1490.
 
-En statisk sida (HTML, CSS och lite JavaScript) utan byggsteg. Den kan läggas upp på valfritt webbhotell,
-GitHub Pages, Netlify eller liknande.
+Byggd i samma designsystem som S-Bygg-sajten: samma sidstruktur, typografi (Plus Jakarta Sans), mörkt sidhuvud och
+sidfot, piller-knappar och runda ”Ring”-knappar, stora foton med rundade hörn och enkla staplade sektioner som växlar
+mellan vitt och ljusgrått. Färgerna är BA Byggs egna: grafit och falurött.
 
-## Visa sidan lokalt
+## Logga
+
+Loggan är ritad som vektorbanor ur Plus Jakarta Sans, så den ser likadan ut överallt:
+
+- `docs/img/ba-bygg-logo.svg` – vit text, används i sidhuvud och sidfot
+- `assets-src/ba-bygg-logo-morkt.svg` – mörk text, för ljus bakgrund
+- `docs/img/favicon.svg` – BA-märket
+
+## Sidor
+
+Allt ligger i [`docs/`](docs/) och kräver inga verktyg – öppna `docs/index.html` i en webbläsare.
+
+- `index.html` – startsidan: hero, introduktion, tjänster, företaget i korthet, om oss med arbetsgång, kontakt med
+  offertformulär, vanliga frågor, SEO-text med interna länkar och karta
+- sex tjänstesidor: `tjanst-nybyggnation.html`, `tjanst-tillbyggnad.html`, `tjanst-renovering.html`,
+  `tjanst-badrum.html`, `tjanst-kok.html`, `tjanst-underhall.html`
+- `404.html`, `sitemap.xml`, `robots.txt`
+
+## Ändra text
+
+Sidorna genereras av `scripts/build.py`, där all text, alla tjänster, omdömen och kontaktuppgifter finns. Ändra där och kör:
 
 ```bash
-python3 -m http.server 8000
+python3 scripts/build.py docs
 ```
 
-Öppna sedan <http://localhost:8000>. Det går också att öppna `index.html` direkt i webbläsaren.
+## Fakta och förslag – gå igenom före lansering
 
-## Struktur
+Alla uppgifter och källor finns i [`research/foretagsinfo.md`](research/foretagsinfo.md).
 
-```
-index.html              Hela sidan (tjänster, om oss, så går det till, omdömen, område, kontakt)
-assets/css/style.css    Stilmall
-assets/js/main.js       Mobilmeny, omdömen, offertformulär
-assets/js/omdomen.js    Kundomdömen – lägg in riktiga omdömen här
-assets/img/             Bilder och logotyp
-research/foretagsinfo.md  All insamlad information om företaget, med källor
-```
+**Verifierat** (Allabolag, Hitta.se, årsredovisning 2024): firmanamn, bifirman BA Bygg Emmaboda, org.nr,
+momsreg.nr, registrerat 1988, säte och adress Vegagatan 6 i Emmaboda, F-skatt, verksamhet (nybyggnation,
+tillbyggnad och renovering av hus och andra byggnader samt fastighetsförvaltning).
 
-## Innan sidan publiceras
+**Bör bekräftas:**
 
-Uppgifterna kommer från offentliga register och kataloger (se `research/foretagsinfo.md`). Stäm av med företaget:
+- Telefonnumren. Källorna anger olika nummer; sidan använder 0471-104 91 (Hitta, Yelp) och 070-268 22 50 (Eniro).
+- Tjänsterna *Badrumsrenovering*, *Köksrenovering* och *Fastighetsunderhåll* (`confirmed=False` i `SERVICES`).
+  De visas som knappar under ”Vi tar också förfrågningar om”.
+- Listorna ”Det kan ingå” på tjänstesidorna, arbetsgången och svaren i Vanliga frågor.
+- `EMAIL` är tom tills adressen är känd; då visas den inte alls.
 
-1. **Telefonnummer** – källorna anger olika nummer. Sidan använder 0471-104 91 (Hitta, Yelp) och 070-268 22 50 (Eniro).
-2. **Texterna** – tjänstebeskrivningar och arbetssätt bygger på företagets registrerade verksamhet och katalogtexter.
-   Justera så att de stämmer med hur företaget faktiskt jobbar.
-3. **Bilder** – inga egna bilder från företaget fanns publicerade. Toppbilden och tjänstebilderna är
-   illustrationsbilder från Unsplash. Byt gärna mot riktiga projektbilder (samma filnamn i `assets/img/` räcker).
-4. **Omdömen** – inga publika omdömen hittades. Lägg in riktiga kundomdömen i `assets/js/omdomen.js`;
-   tills dess visar sidan en uppmaning att lämna omdöme på Hitta.se.
-5. **E-post** – ingen e-postadress hittades. Offertformuläret öppnar därför ett sms till mobilnumret.
-   Fyll i `KONTAKT_EPOST` överst i `assets/js/main.js` för att i stället skicka formuläret som e-post.
+Inga certifieringar, försäkringar, garantier eller antal anställda anges.
 
-## Bildkällor
+## Omdömen
 
-- Illustrationsbilder: [Unsplash](https://unsplash.com/license) (fri användning, erkännande krävs inte).
-- *Emmaboda Ersjön 002* – Bernt Fransson, Lindås,
-  [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Emmaboda_Ersj%C3%B6n_002.jpg),
-  [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Fotografens namn och licensen
-  måste stå kvar bredvid bilden och i sidfoten.
+Inga publika omdömen hittades (Hitta.se: 0). Lägg in riktiga omdömen ordagrant i `REVIEWS` i `scripts/build.py`.
+Tills dess visar sidan en uppmaning att lämna omdöme på Hitta.se.
+
+## Offertformuläret
+
+Formuläret skickar e-post via [FormSubmit](https://formsubmit.co) (gratis) och visar ett tackmeddelande när det
+gått fram. Under förhandsvisningen går förfrågningarna till Elevate Studio; byt `FORM_EMAIL` i `scripts/build.py`
+till BA Byggs adress vid lansering. Första förfrågan till en ny adress skickar bara ett aktiveringsmejl.
+En tjänstesidas ”Begär offert” fyller i projekttypen automatiskt (`index.html?typ=…#offert`).
+
+## Bilder
+
+Inga egna bilder från företaget finns publicerade. Fotona i `docs/img/` är stockbilder från
+[Unsplash](https://unsplash.com/license) och märks på sidan som illustrationsbilder. Undantaget är
+`emmaboda.jpg` (Ersjön i Emmaboda) av Bernt Fransson, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Emmaboda_Ersj%C3%B6n_002.jpg),
+CC BY-SA 4.0 – fotografens namn och licensen måste stå kvar. Byt mot egna bilder genom att ersätta filerna med samma
+namn (både `namn.jpg`, ca 1800 px, och `namn-s.jpg`, ca 800 px).
+
+## Publicera
+
+GitHub Pages publicerar mappen `docs/` från grenen `claude/awesome-einstein-sboy64`. Byt `SITE_URL` i
+`scripts/build.py` om sidan får en egen domän.

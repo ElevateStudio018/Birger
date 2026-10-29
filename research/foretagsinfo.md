@@ -72,15 +72,15 @@ Inga kundrecensioner kunde hämtas:
 - **Yelp** och **Bygg.se** – har företagssidor som kan innehålla omdömen, men sidorna blockerar automatisk hämtning (HTTP 403) och inget omdöme syns i sökresultat.
 - **Reco.se, Google, Facebook** – ingen företagsprofil med omdömen hittades.
 
-Hemsidan har därför en omdömessektion som visar en uppmaning att lämna omdöme tills riktiga omdömen
-läggs in i `assets/js/omdomen.js`. Hitta inga omdömen på – lägg bara in riktiga, verifierbara kundomdömen.
+Hemsidan visar därför en uppmaning att lämna omdöme på Hitta.se tills riktiga omdömen läggs in i `REVIEWS` i
+`scripts/build.py`. Hitta inte på omdömen – lägg bara in riktiga, verifierbara kundomdömen.
 
 ## Bilder
 
 Inga egna bilder från företaget (projekt, personal, logotyp) finns publicerade någonstans.
 Hemsidan använder därför:
 
-- **Illustrationsbilder från Unsplash** (fri licens, kräver inget erkännande) för tjänsterna och toppbilden.
+- **Illustrationsbilder från Unsplash** (fri licens, kräver inget erkännande) för toppbilder och tjänster.
 - **Foto från Emmaboda** från Wikimedia Commons: *Emmaboda Ersjön 002* av Bernt Fransson, Lindås, licens CC BY-SA 4.0 –
   <https://commons.wikimedia.org/wiki/File:Emmaboda_Ersj%C3%B6n_002.jpg>
 
