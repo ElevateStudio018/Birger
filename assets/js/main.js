@@ -12,11 +12,13 @@
     toggle.addEventListener("click", function () {
       var open = toggle.getAttribute("aria-expanded") === "true";
       toggle.setAttribute("aria-expanded", String(!open));
+      toggle.firstElementChild.textContent = open ? "Meny" : "Stäng";
       nav.classList.toggle("is-open", !open);
     });
     nav.addEventListener("click", function (e) {
       if (e.target.closest("a")) {
         toggle.setAttribute("aria-expanded", "false");
+        toggle.firstElementChild.textContent = "Meny";
         nav.classList.remove("is-open");
       }
     });
@@ -39,19 +41,14 @@
     el.textContent = now - Number(el.getAttribute("data-years-since"));
   });
 
-  // Omdömen
+  // Omdömen – sektionen visas bara när det finns omdömen i omdomen.js
   var list = document.querySelector("[data-reviews]");
-  var empty = document.querySelector("[data-reviews-empty]");
   var reviews = Array.isArray(window.OMDOMEN) ? window.OMDOMEN : [];
-  if (list && empty) {
-    if (reviews.length === 0) {
-      list.hidden = true;
-      empty.hidden = false;
-    } else {
-      reviews.forEach(function (r) {
-        list.appendChild(renderReview(r));
-      });
-    }
+  if (list && reviews.length > 0) {
+    reviews.forEach(function (r) {
+      list.appendChild(renderReview(r));
+    });
+    document.getElementById("omdomen").hidden = false;
   }
 
   function renderReview(r) {
@@ -93,7 +90,7 @@
     var note = form.querySelector("[data-form-note]");
     var error = form.querySelector("[data-form-error]");
     if (KONTAKT_EPOST && note) {
-      note.textContent = "När du skickar öppnas ditt e-postprogram med meddelandet färdigskrivet.";
+      note.textContent = "Ditt e-postprogram öppnas med meddelandet ifyllt.";
     }
 
     form.addEventListener("submit", function (e) {
