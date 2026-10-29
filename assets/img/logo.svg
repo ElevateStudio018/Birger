@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="BA Bygg Emmaboda">
-  <rect width="64" height="64" fill="#151515"/>
-  <text x="32" y="43" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#f1efe9" letter-spacing="-1.5">BA</text>
+  <circle cx="32" cy="32" r="29.5" fill="none" stroke="currentColor" stroke-width="2"/>
+  <path d="M19 26 32 16l13 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+  <text x="32" y="45" text-anchor="middle" font-size="14" font-family="'Bodoni Moda', Didot, 'Bodoni 72', Georgia, serif" letter-spacing="1.5" fill="currentColor">BA</text>
 </svg>

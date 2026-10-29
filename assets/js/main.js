@@ -5,29 +5,31 @@
   var KONTAKT_EPOST = "";
   var KONTAKT_SMS = "+46702682250";
 
-  // Mobilmeny
-  var toggle = document.querySelector(".nav-toggle");
-  var nav = document.getElementById("site-nav");
-  if (toggle && nav) {
+  // Helskärmsmeny
+  var toggle = document.querySelector(".menu-toggle");
+  var menu = document.getElementById("menu");
+  var setMenu = function (open) {
+    toggle.setAttribute("aria-expanded", String(open));
+    menu.classList.toggle("is-open", open);
+    document.body.classList.toggle("menu-open", open);
+  };
+  if (toggle && menu) {
     toggle.addEventListener("click", function () {
-      var open = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", String(!open));
-      toggle.firstElementChild.textContent = open ? "Meny" : "Stäng";
-      nav.classList.toggle("is-open", !open);
+      setMenu(toggle.getAttribute("aria-expanded") !== "true");
     });
-    nav.addEventListener("click", function (e) {
-      if (e.target.closest("a")) {
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.firstElementChild.textContent = "Meny";
-        nav.classList.remove("is-open");
-      }
+    menu.addEventListener("click", function (e) {
+      if (e.target.closest("a")) setMenu(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") setMenu(false);
     });
   }
 
-  // Header får skugga när man scrollat
+  // Headern ligger transparent över toppbilden och blir ljus när man scrollat förbi den
   var header = document.querySelector(".site-header");
+  var hero = document.querySelector(".hero");
   var onScroll = function () {
-    header.classList.toggle("is-scrolled", window.scrollY > 8);
+    header.classList.toggle("is-solid", window.scrollY > hero.offsetHeight - header.offsetHeight);
   };
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BA Bygg Emmaboda – Byggnadsfirman Birger Andersson</title>
   <meta name="description" content="BA Bygg Emmaboda (Byggnadsfirman Birger Andersson Emmaboda AB). Nybyggnation, tillbyggnad, renovering, kök och badrum i Emmaboda med omnejd sedan 1988. Ring 0471-104 91.">
-  <meta name="theme-color" content="#f1efe9">
+  <meta name="theme-color" content="#6e2a22">
   <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
 
   <meta property="og:type" content="website">
@@ -16,7 +16,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Jost:wght@300;400;500&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <script type="application/ld+json">
@@ -49,205 +49,191 @@
   <a class="skip-link" href="#main">Hoppa till innehållet</a>
 
   <header class="site-header" id="top">
-    <div class="wrap header-inner">
-      <a class="wordmark" href="#top">BA Bygg<span>Emmaboda</span></a>
+    <a class="header-phone" href="tel:+4647110491">0471-104 91</a>
 
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
-        <span class="nav-toggle-label">Meny</span>
-      </button>
+    <a class="logo" href="#top" aria-label="BA Bygg Emmaboda – till toppen">
+      <svg class="emblem" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="29.5" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M19 26 32 16l13 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        <text x="32" y="45" text-anchor="middle" font-size="14" letter-spacing="1.5" fill="currentColor">BA</text>
+      </svg>
+      <span class="logo-text">BA Bygg</span>
+    </a>
 
-      <nav class="site-nav" id="site-nav" aria-label="Huvudmeny">
-        <a href="#tjanster">Tjänster</a>
-        <a href="#om-oss">Om oss</a>
-        <a href="#arbetsgang">Arbetsgång</a>
-        <a href="#kontakt">Kontakt</a>
-        <a class="nav-phone" href="tel:+4647110491">0471-104 91</a>
-      </nav>
-    </div>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu">
+      <span class="menu-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Meny</span>
+    </button>
   </header>
+
+  <nav class="menu" id="menu" aria-label="Huvudmeny">
+    <ul>
+      <li><a href="#tjanster">Tjänster</a></li>
+      <li><a href="#om-oss">Om oss</a></li>
+      <li><a href="#offert">Begär offert</a></li>
+      <li><a href="#arbetsgang">Så jobbar vi</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <p class="menu-contact">
+      <a href="tel:+4647110491">0471-104 91</a><br>
+      Vegagatan 6, Emmaboda
+    </p>
+  </nav>
 
   <main id="main">
     <section class="hero">
-      <div class="wrap">
-        <h1>Vi bygger hus i&nbsp;Emmaboda. <span>Sedan 1988.</span></h1>
-        <div class="hero-meta">
-          <p>Byggnadsfirman Birger Andersson Emmaboda&nbsp;AB</p>
-          <p>Nybyggnation, tillbyggnad och renovering för privatpersoner och fastighetsägare.</p>
-          <p><a class="arrow-link" href="#kontakt">Begär offert</a></p>
-        </div>
+      <picture>
+        <source media="(max-width: 800px)" srcset="assets/img/hero-1200.jpg">
+        <img class="hero-img" src="assets/img/hero.jpg" alt="Trähus i skogsbryn i kvällsljus" width="2000" height="1334" fetchpriority="high">
+      </picture>
+      <div class="hero-content">
+        <h1>Hus och hem byggda<br>med omsorg &amp; hantverk</h1>
+        <a class="btn btn-light" href="#offert">Begär offert</a>
       </div>
-      <figure class="hero-figure">
-        <picture>
-          <source media="(max-width: 800px)" srcset="assets/img/hero-1200.jpg">
-          <img src="assets/img/hero.jpg" alt="Trähus i skogsbryn i kvällsljus" width="2000" height="1334" fetchpriority="high">
-        </picture>
-      </figure>
+      <p class="hero-foot">Byggnadsfirman Birger Andersson · Emmaboda sedan 1988</p>
     </section>
 
-    <section class="section" id="tjanster">
-      <div class="wrap grid">
-        <h2 class="label">Tjänster</h2>
-        <div class="content">
-          <p class="intro">Vi tar hand om byggdelen från första skiss till färdigt hus. Stora projekt och små.</p>
-
-          <ol class="services">
-            <li class="service">
-              <span class="service-no">01</span>
-              <h3>Nybyggnation</h3>
-              <p>Villor, fritidshus, garage och förråd. Vi följer med från planering och bygglov till inflyttning.</p>
-              <img src="assets/img/nybyggnation.jpg" alt="" width="1000" height="666" loading="lazy">
-            </li>
-            <li class="service">
-              <span class="service-no">02</span>
-              <h3>Tillbyggnad</h3>
-              <p>Ett sovrum till, ett uterum eller en större hall, anpassat efter huset du redan har.</p>
-              <img src="assets/img/tillbyggnad.jpg" alt="" width="1000" height="668" loading="lazy">
-            </li>
-            <li class="service">
-              <span class="service-no">03</span>
-              <h3>Renovering och ombyggnad</h3>
-              <p>Ett rum eller hela huset. Väggar, isolering, fönster, dörrar och golv.</p>
-              <img src="assets/img/renovering.jpg" alt="" width="1000" height="666" loading="lazy">
-            </li>
-            <li class="service">
-              <span class="service-no">04</span>
-              <h3>Kök och badrum</h3>
-              <p>Vi river och bygger upp. El, VVS och plattsättning görs av behöriga hantverkare som vi samordnar.</p>
-              <img src="assets/img/badrum.jpg" alt="" width="1000" height="666" loading="lazy">
-            </li>
-            <li class="service">
-              <span class="service-no">05</span>
-              <h3>Underhåll</h3>
-              <p>Fasad, tak, fönster och reparationer för villaägare och fastighetsägare.</p>
-              <img src="assets/img/underhall.jpg" alt="" width="1000" height="666" loading="lazy">
-            </li>
-          </ol>
-        </div>
-      </div>
+    <section class="tiles" id="tjanster" aria-label="Tjänster">
+      <article class="tile tile-1">
+        <img src="assets/img/nybyggnation.jpg" alt="Nybyggt hus med träfasad" width="1000" height="666" loading="lazy">
+        <h2 class="caps">Nybyggnation</h2>
+        <p class="script">från grund till tak</p>
+        <p>Villor, fritidshus, garage och förråd. Vi följer med från planering och bygglov till inflyttning.</p>
+      </article>
+      <article class="tile tile-2">
+        <img src="assets/img/tillbyggnad.jpg" alt="Hantverkare isolerar en regelvägg" width="1000" height="668" loading="lazy">
+        <h2 class="caps">Tillbyggnad</h2>
+        <p class="script">mer rum att leva i</p>
+        <p>Ett sovrum till, ett uterum eller en större hall, anpassat efter huset du redan har.</p>
+      </article>
+      <article class="tile tile-3">
+        <img src="assets/img/renovering.jpg" alt="Hus under ombyggnad med uppstöttat bjälklag" width="1000" height="666" loading="lazy">
+        <h2 class="caps">Renovering</h2>
+        <p class="script">nytt liv i gamla hus</p>
+        <p>Ett rum eller hela huset. Väggar, isolering, fönster, dörrar och golv, med respekt för husets karaktär.</p>
+      </article>
+      <article class="tile tile-4">
+        <img src="assets/img/badrum.jpg" alt="Nyrenoverat badrum med glasvägg" width="1000" height="666" loading="lazy">
+        <h2 class="caps">Kök &amp; badrum</h2>
+        <p class="script">rum som håller länge</p>
+        <p>Vi river och bygger upp. El, VVS och plattsättning görs av behöriga hantverkare som vi samordnar.</p>
+      </article>
     </section>
 
-    <section class="section" id="om-oss">
-      <div class="wrap grid">
-        <h2 class="label">Om oss</h2>
-        <div class="content">
-          <p class="statement">Byggnadsfirman Birger Andersson startade 1988. I dag heter vi BA&nbsp;Bygg och är fortfarande ett litet företag i Emmaboda. Det betyder att du pratar direkt med dem som bygger.</p>
-
-          <dl class="facts">
-            <div><dt>Grundat</dt><dd>1988</dd></div>
-            <div><dt>I branschen</dt><dd><span data-years-since="1988">38</span> år</dd></div>
-            <div><dt>Bas</dt><dd>Vegagatan 6, Emmaboda</dd></div>
-            <div><dt>F-skatt</dt><dd>Godkänd</dd></div>
-            <div><dt>ROT-avdrag</dt><dd>Dras direkt på fakturan</dd></div>
-          </dl>
-        </div>
-      </div>
-
-      <div class="wrap duo">
-        <figure class="duo-a">
+    <section class="band" id="om-oss">
+      <div class="band-inner">
+        <figure class="band-figure">
           <img src="assets/img/planering.jpg" alt="Byggritningar som gås igenom vid ett bord" width="1200" height="675" loading="lazy">
+          <figcaption class="caps">Byggt i Emmaboda<br>sedan 1988</figcaption>
         </figure>
-        <figure class="duo-b">
-          <picture>
-            <source media="(max-width: 800px)" srcset="assets/img/emmaboda-ersjon-900.jpg">
-            <img src="assets/img/emmaboda-ersjon.jpg" alt="Ersjön i Emmaboda en sommardag" width="1600" height="964" loading="lazy">
-          </picture>
-          <figcaption>Ersjön, Emmaboda. Foto: Bernt Fransson, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.sv" rel="noopener" target="_blank">CC BY-SA 4.0</a></figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section" id="arbetsgang">
-      <div class="wrap grid">
-        <h2 class="label">Arbetsgång</h2>
-        <div class="content">
-          <ol class="steps">
-            <li><h3>Samtal</h3><p>Ring och berätta vad du vill göra och var huset ligger.</p></li>
-            <li><h3>Besök</h3><p>Vi kommer ut och tittar på förutsättningarna på plats.</p></li>
-            <li><h3>Offert</h3><p>Du får en skriftlig offert där det står vad som ingår.</p></li>
-            <li><h3>Bygge</h3><p>Vi bygger och håller dig uppdaterad fram till slutbesiktning.</p></li>
-          </ol>
-          <p class="note">ROT-avdrag: som privatperson får du skattereduktion på arbetskostnaden när du bygger om, bygger till eller underhåller ditt hem. Vi drar av det direkt på fakturan och sköter ansökan till <a href="https://www.skatteverket.se/rot" rel="noopener" target="_blank">Skatteverket</a>.</p>
+        <div class="band-text">
+          <p class="script script-light">Om oss</p>
+          <h2 class="caps">Ett litet företag<br>med nära kontakt</h2>
+          <p>Byggnadsfirman Birger Andersson startade 1988. I dag heter vi BA Bygg och är fortfarande ett litet byggföretag i Emmaboda. Du pratar direkt med dem som bygger, från första besöket till sista spiken.</p>
+          <p>Förutom nya hus, tillbyggnader och renoveringar tar vi hand om underhåll av fasader, tak och fönster åt villaägare och fastighetsägare.</p>
         </div>
       </div>
     </section>
 
-    <section class="section" id="omdomen" hidden>
-      <div class="wrap grid">
-        <h2 class="label">Omdömen</h2>
-        <div class="content reviews" data-reviews></div>
+    <section class="offer" id="offert">
+      <form class="offer-card" data-contact-form novalidate>
+        <span class="offer-badge" aria-hidden="true">
+          <svg class="emblem" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="29.5" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M19 26 32 16l13 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <text x="32" y="45" text-anchor="middle" font-size="14" letter-spacing="1.5" fill="currentColor">BA</text>
+          </svg>
+        </span>
+        <h2 class="caps">Vi lämnar gärna offert</h2>
+        <p class="offer-intro">Funderar du på att bygga nytt, bygga till eller renovera? Berätta kort om ditt projekt så hör vi av oss.</p>
+
+        <label class="field"><span>Namn</span><input name="namn" type="text" autocomplete="name" required></label>
+        <label class="field"><span>Telefon</span><input name="telefon" type="tel" autocomplete="tel" required></label>
+        <label class="field"><span>Ort</span><input name="ort" type="text" autocomplete="address-level2"></label>
+        <label class="field">
+          <span>Typ av jobb</span>
+          <select name="typ">
+            <option>Nybyggnation</option>
+            <option>Tillbyggnad</option>
+            <option>Renovering / ombyggnad</option>
+            <option>Kök eller badrum</option>
+            <option>Underhåll / reparation</option>
+            <option>Annat</option>
+          </select>
+        </label>
+        <label class="field"><span>Ditt projekt</span><textarea name="meddelande" rows="3" required></textarea></label>
+
+        <div class="offer-foot">
+          <p class="small" data-form-note>Ditt sms-program öppnas med meddelandet ifyllt till 070-268 22 50.</p>
+          <button class="btn" type="submit">Skicka</button>
+        </div>
+        <p class="small form-error" data-form-error role="alert" hidden>Fyll i namn, telefon och en kort beskrivning.</p>
+      </form>
+    </section>
+
+    <section class="process" id="arbetsgang">
+      <figure class="process-img process-img-1">
+        <img src="assets/img/underhall.jpg" alt="Målarverktyg och färgtråg" width="1000" height="666" loading="lazy">
+      </figure>
+      <div class="process-text">
+        <p class="script">Så jobbar vi</p>
+        <ol class="steps">
+          <li><span class="caps">Samtal</span> Ring och berätta vad du vill göra och var huset ligger.</li>
+          <li><span class="caps">Besök</span> Vi kommer ut och tittar på förutsättningarna på plats.</li>
+          <li><span class="caps">Offert</span> Du får en skriftlig offert där det står vad som ingår.</li>
+          <li><span class="caps">Bygge</span> Vi bygger och håller dig uppdaterad fram till slutbesiktning.</li>
+        </ol>
+        <p class="small">Som privatperson får du ROT-avdrag på arbetskostnaden. Vi drar av det direkt på fakturan och sköter ansökan till <a href="https://www.skatteverket.se/rot" rel="noopener" target="_blank">Skatteverket</a>.</p>
       </div>
     </section>
 
-    <section class="section" id="omrade">
-      <div class="wrap grid">
-        <h2 class="label">Område</h2>
-        <div class="content">
-          <p class="statement statement-small">Emmaboda, Lindås, Vissefjärda, Långasjö, Eriksmåla, Algutsboda, Boda och Johansfors.</p>
-          <p class="intro">Bor du utanför kommunen går det bra att höra av sig ändå.</p>
-        </div>
-      </div>
+    <section class="reviews-section" id="omdomen" hidden>
+      <p class="script">Omdömen</p>
+      <h2 class="caps">Vad våra kunder säger</h2>
+      <div class="reviews" data-reviews></div>
     </section>
 
-    <section class="section section-contact" id="kontakt">
-      <div class="wrap grid">
-        <h2 class="label">Kontakt</h2>
-        <div class="content contact">
-          <div class="contact-info">
-            <a class="big-phone" href="tel:+4647110491">0471-104&nbsp;91</a>
-            <dl class="contact-list">
-              <div><dt>Mobil</dt><dd><a href="tel:+46702682250">070-268 22 50</a></dd></div>
-              <div><dt>Adress</dt><dd>Vegagatan 6<br>361 31 Emmaboda</dd></div>
-              <div><dt>Hitta hit</dt><dd><a class="arrow-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=Vegagatan+6%2C+361+31+Emmaboda" rel="noopener" target="_blank">Vägbeskrivning</a></dd></div>
-            </dl>
-            <p class="small" data-review-cta>Har vi byggt åt dig? <a href="https://www.hitta.se/verksamhet/byggnadsfirman-birger-andersson-emmaboda-ab-csddjppq" rel="noopener" target="_blank">Lämna gärna ett omdöme på Hitta.se</a>.</p>
-          </div>
-
-          <form class="contact-form" data-contact-form novalidate>
-            <p class="form-title">Eller skicka en förfrågan</p>
-            <label class="field">
-              <span>Namn</span>
-              <input name="namn" type="text" autocomplete="name" required>
-            </label>
-            <label class="field">
-              <span>Telefon</span>
-              <input name="telefon" type="tel" autocomplete="tel" required>
-            </label>
-            <label class="field">
-              <span>Ort</span>
-              <input name="ort" type="text" autocomplete="address-level2">
-            </label>
-            <label class="field">
-              <span>Typ av jobb</span>
-              <select name="typ">
-                <option>Nybyggnation</option>
-                <option>Tillbyggnad</option>
-                <option>Renovering / ombyggnad</option>
-                <option>Kök eller badrum</option>
-                <option>Underhåll / reparation</option>
-                <option>Annat</option>
-              </select>
-            </label>
-            <label class="field">
-              <span>Vad vill du göra?</span>
-              <textarea name="meddelande" rows="4" required></textarea>
-            </label>
-            <button class="button" type="submit">Skicka</button>
-            <p class="small" data-form-note>Ditt sms-program öppnas med meddelandet ifyllt till 070-268 22 50.</p>
-            <p class="small form-error" data-form-error role="alert" hidden>Fyll i namn, telefon och vad du vill göra.</p>
-          </form>
-        </div>
+    <section class="area" id="kontakt">
+      <picture>
+        <source media="(max-width: 800px)" srcset="assets/img/emmaboda-ersjon-900.jpg">
+        <img class="area-bg" src="assets/img/emmaboda-ersjon.jpg" alt="Ersjön i Emmaboda en sommardag" width="1600" height="964" loading="lazy">
+      </picture>
+      <p class="area-caption">Ersjön, Emmaboda. Foto: Bernt Fransson, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.sv" rel="noopener" target="_blank">CC BY-SA 4.0</a></p>
+      <div class="area-box">
+        <h2 class="caps">Hör av dig</h2>
+        <p>Vi bygger i Emmaboda, Lindås, Vissefjärda, Långasjö, Eriksmåla, Algutsboda, Boda och Johansfors. Bor du utanför kommunen går det bra att ringa ändå.</p>
+        <p class="area-phone"><a href="tel:+4647110491">0471-104 91</a><br><a href="tel:+46702682250">070-268 22 50</a></p>
+        <a class="btn btn-light" href="https://www.google.com/maps/dir/?api=1&amp;destination=Vegagatan+6%2C+361+31+Emmaboda" rel="noopener" target="_blank">Vägbeskrivning</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <p class="footer-mark">BA Bygg</p>
-      <div class="footer-row">
-        <p>Byggnadsfirman Birger Andersson Emmaboda AB<br>Org.nr 556337-1490 · Momsreg.nr SE556337149001 · F-skatt</p>
-        <p>Vegagatan 6, 361 31 Emmaboda<br><a href="tel:+4647110491">0471-104 91</a> · <a href="tel:+46702682250">070-268 22 50</a></p>
-        <p class="credits">Bilder: <a href="https://unsplash.com/license" rel="noopener" target="_blank">Unsplash</a>. Ersjön: Bernt Fransson, <a href="https://commons.wikimedia.org/wiki/File:Emmaboda_Ersj%C3%B6n_002.jpg" rel="noopener" target="_blank">Wikimedia Commons</a>, CC BY-SA 4.0<br>© <span data-year>2026</span></p>
-      </div>
+    <div class="footer-grid">
+      <ul class="footer-links">
+        <li><a href="tel:+4647110491">0471-104 91</a></li>
+        <li><a href="tel:+46702682250">070-268 22 50</a></li>
+        <li>Vegagatan 6</li>
+        <li>361 31 Emmaboda</li>
+      </ul>
+      <a class="logo logo-footer" href="#top" aria-label="Till toppen">
+        <svg class="emblem" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="29.5" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M19 26 32 16l13 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <text x="32" y="45" text-anchor="middle" font-size="14" letter-spacing="1.5" fill="currentColor">BA</text>
+        </svg>
+        <span class="logo-text">BA Bygg</span>
+      </a>
+      <ul class="footer-links">
+        <li><a href="#tjanster">Tjänster</a></li>
+        <li><a href="#om-oss">Om oss</a></li>
+        <li><a href="#offert">Begär offert</a></li>
+        <li><a href="https://www.hitta.se/verksamhet/byggnadsfirman-birger-andersson-emmaboda-ab-csddjppq" rel="noopener" target="_blank">Lämna omdöme</a></li>
+      </ul>
+    </div>
+    <div class="footer-legal">
+      <p>Byggnadsfirman Birger Andersson Emmaboda AB · Org.nr 556337-1490 · Momsreg.nr SE556337149001 · Godkänd för F-skatt</p>
+      <p>Bilder: <a href="https://unsplash.com/license" rel="noopener" target="_blank">Unsplash</a>. Ersjön: Bernt Fransson, <a href="https://commons.wikimedia.org/wiki/File:Emmaboda_Ersj%C3%B6n_002.jpg" rel="noopener" target="_blank">Wikimedia Commons</a>, CC BY-SA 4.0 · © <span data-year>2026</span></p>
     </div>
   </footer>
 
